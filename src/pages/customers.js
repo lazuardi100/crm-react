@@ -19,7 +19,7 @@ function Customers() {
       <div className="container mt-3">
         <h1>List Customers</h1>
         <a href="/tambah" className="btn btn-success">Tambah Customers</a>
-        <table class="table">
+        <table className="table">
           <thead>
             <tr>
               <th>Customers</th>

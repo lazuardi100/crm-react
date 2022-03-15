@@ -32,25 +32,25 @@ function Tambah() {
   };
   return (
     <div className="container mt-3">
-      <div class="mb-3">
+      <div ClassName="mb-3">
         <label for="" className="form-label">
           Nama Calon Customer
         </label>
         <input
           type="text"
-          class="form-control"
+          ClassName="form-control"
           name="nama"
           id="nama"
           aria-describedby="helpId"
           placeholder=""
         />
-        <div class="mb-3">
+        <div ClassName="mb-3">
           <label for="" className="form-label">
             Nomor HP
           </label>
           <input
             type="text"
-            class="form-control"
+            ClassName="form-control"
             name="no_hp"
             id="no_hp"
             aria-describedby="helpId"
