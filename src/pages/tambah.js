@@ -10,6 +10,7 @@ const MUTATION = gql`
 `;
 
 function Tambah() {
+  // eslint-disable-next-line no-unused-vars
   const [mutation, {data, loading, error}] = useMutation(MUTATION);
   const navigate = useNavigate();
 
