@@ -6,11 +6,23 @@ import 'bootstrap/scss/bootstrap.scss';
 import 'bootstrap/dist/js/bootstrap.min.js'
 import { BrowserRouter } from "react-router-dom";
 
-import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloProvider, ApolloClient, InMemoryCache, DefaultOptions } from "@apollo/client";
+
+const defaultOptions = {
+  watchQuery: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'ignore',
+  },
+  query: {
+    fetchPolicy: 'no-cache',
+    errorPolicy: 'all',
+  },
+}
 
 const client = new ApolloClient({
-  uri: "http://127.0.0.1:3000/graphql",
-  cache: new InMemoryCache()
+  uri: "https://ruby-crm.herokuapp.com/graphql",
+  cache: new InMemoryCache(),
+  defaultOptions: defaultOptions,
 });
 
 ReactDOM.render(
@@ -19,8 +31,6 @@ ReactDOM.render(
       <App />
     </ApolloProvider>
   </BrowserRouter>,
-  // <React.StrictMode>
-  // </React.StrictMode>,
   document.getElementById('root')
 );
 

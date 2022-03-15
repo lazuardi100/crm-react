@@ -10,7 +10,7 @@ function Customers() {
       }
     }
   `;
-  const { loading, error, data } = useQuery(CUSTOMERS_QUERY);
+  const { loading, error, data } = useQuery(CUSTOMERS_QUERY, {fetchPolicy: 'network-only'});
   if (loading) return "Loading...";
   if (error) return <pre>{error.message}</pre>;
   console.log(data.customers);
