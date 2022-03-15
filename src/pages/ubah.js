@@ -1,6 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useQuery, useMutation, gql } from "@apollo/client";
-import { useState, useEffect } from "react";
 
 const SEARCH_QUERY = gql`
   query CariCustomer($id: String!) {
